@@ -1,0 +1,10 @@
+/_build/
+/cover/
+/deps/
+/doc/
+/.fetch_date
+erl_crash.dump
+*.ez
+*.beam
+/tmp/
+.DS_Store
