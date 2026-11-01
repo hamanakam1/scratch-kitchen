@@ -32,3 +32,22 @@ defmodule ScratchKitchenExtraTest do
     assert Receipt.match_lines(["milk"], []) == [{"milk", :new_item}]
   end
 end
+
+
+defmodule ScratchKitchenOfferTest do
+  use ExUnit.Case, async: true
+  alias ScratchKitchen.Share.Offer
+
+  test "offer advances through states and approval" do
+    o = %Offer{id: "1", meal_id: "m", items: ["soup"], quantity: 1, date_prepared: ~D[2026-11-01], track: :giveaway}
+    o = Offer.approve(o)
+    assert o.approved
+    o = o |> Offer.advance() |> Offer.advance()
+    assert o.status == :offered
+  end
+
+  test "proposal description boundary" do
+    assert ScratchKitchen.Meals.Proposal.valid_description?(String.duplicate("w ", 40))
+    refute ScratchKitchen.Meals.Proposal.valid_description?(String.duplicate("w ", 41))
+  end
+end
