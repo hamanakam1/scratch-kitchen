@@ -158,6 +158,17 @@ planned → packed → offered → picked up → delivered
 
 Giveaway vs. cottage sale is clearly labelled on every offer. A named human coordinator completes pickup and delivery. **No automatic dispatch, no payment, no courier booking in v1.** The app prepares an offer, the cook approves it, a human completes it. The app does not arrange a driver, take payment, book a courier, contact recipients, or claim a food is safe.
 
+
+```mermaid
+stateDiagram-v2
+  [*] --> planned
+  planned --> packed
+  packed --> offered
+  offered --> picked_up
+  picked_up --> delivered
+  planned --> cancelled
+```
+
 ## Architecture
 
 ```mermaid
