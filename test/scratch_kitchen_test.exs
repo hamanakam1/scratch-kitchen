@@ -10,12 +10,29 @@ defmodule ScratchKitchenTest do
 
   test "reuse into a new meal is allowed, re-serving the same meal is not" do
     assert {:ok, _} = Reuse.transform("roast chicken", "chicken soup", "roast chicken")
-    assert {:error, :same_meal_reserved} = Reuse.transform("chicken soup", "chicken soup", "chicken soup")
+
+    assert {:error, :same_meal_reserved} =
+             Reuse.transform("chicken soup", "chicken soup", "chicken soup")
   end
 
   test "only good / use soon items are shareable" do
-    assert Item.shareable?(%Item{id: "1", name: "soup", photo_file: "f.jpg", photo_date: ~D[2026-10-31], location: :prepared, still_good: :good})
-    refute Item.shareable?(%Item{id: "2", name: "soup", photo_file: "f.jpg", photo_date: ~D[2026-10-31], location: :prepared, still_good: :check})
+    assert Item.shareable?(%Item{
+             id: "1",
+             name: "soup",
+             photo_file: "f.jpg",
+             photo_date: ~D[2026-10-31],
+             location: :prepared,
+             still_good: :good
+           })
+
+    refute Item.shareable?(%Item{
+             id: "2",
+             name: "soup",
+             photo_file: "f.jpg",
+             photo_date: ~D[2026-10-31],
+             location: :prepared,
+             still_good: :check
+           })
   end
 end
 
@@ -33,13 +50,20 @@ defmodule ScratchKitchenExtraTest do
   end
 end
 
-
 defmodule ScratchKitchenOfferTest do
   use ExUnit.Case, async: true
   alias ScratchKitchen.Share.Offer
 
   test "offer advances through states and approval" do
-    o = %Offer{id: "1", meal_id: "m", items: ["soup"], quantity: 1, date_prepared: ~D[2026-11-01], track: :giveaway}
+    o = %Offer{
+      id: "1",
+      meal_id: "m",
+      items: ["soup"],
+      quantity: 1,
+      date_prepared: ~D[2026-11-01],
+      track: :giveaway
+    }
+
     o = Offer.approve(o)
     assert o.approved
     o = o |> Offer.advance() |> Offer.advance()
@@ -49,5 +73,20 @@ defmodule ScratchKitchenOfferTest do
   test "proposal description boundary" do
     assert ScratchKitchen.Meals.Proposal.valid_description?(String.duplicate("w ", 40))
     refute ScratchKitchen.Meals.Proposal.valid_description?(String.duplicate("w ", 41))
+  end
+end
+
+defmodule ScratchKitchenInventoryTest do
+  use ExUnit.Case, async: true
+  alias ScratchKitchen.Inventory
+  alias ScratchKitchen.Inventory.Item
+
+  test "rank assigns use-first ranks" do
+    items = [
+      %Item{id: "1", name: "a", photo_file: "f.jpg", photo_date: ~D[2026-11-01], location: :fridge, still_good: :use_soon},
+      %Item{id: "2", name: "b", photo_file: "f.jpg", photo_date: ~D[2026-11-01], location: :pantry}
+    ]
+    ranked = Inventory.rank(items)
+    assert Enum.map(ranked, & &1.use_first_rank) == [1, 2]
   end
 end
