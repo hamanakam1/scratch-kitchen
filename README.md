@@ -253,6 +253,9 @@ No item, meal, or share is deleted from history. Corrections are new versions. I
 
 - [x] Spec v1, kitchen inventory template, share-board rules
 - [x] MVP scaffold: Elixir core structure, SwiftUI face sketch, extensive README
+- [x] GitHub repo created (public, `main`): https://github.com/hamanakam1/scratch-kitchen — 2026-11-01
+- [ ] Elixir core compile + `mix test` — blocked: Elixir/mix not installed on this Mac
+- [ ] SwiftUI capture UI — blocked: Xcode not installed (only CommandLineTools)
 - [ ] Compile and test the Elixir core on a machine with Elixir installed
 - [ ] SwiftUI app: photo capture, on-device Vision inventory, meal cards, Live Activities
 - [ ] One-day meal proposal, proven with a real frozen-foods batch
