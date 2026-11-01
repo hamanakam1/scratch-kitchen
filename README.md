@@ -1,5 +1,7 @@
 # Scratch Kitchen
 
+![Guard logo](assets/guard-logo.svg)
+
 **Scratch cooking, from what you already have — reused into new meals, never re-served as leftovers, with the extra shared instead of wasted.**
 
 Scratch Kitchen is a photo-first kitchen app. Photograph everything coming into the kitchen, get an initial inventory, and get specific meals proposed for specific people at specific times, based only on ingredients actually on hand. Prepared food that will not be eaten at home is planned for sharing — giveaway first, cottage-kitchen sale only after a compliance check is recorded.
@@ -253,6 +255,7 @@ No item, meal, or share is deleted from history. Corrections are new versions. I
 
 - [x] Spec v1, kitchen inventory template, share-board rules
 - [x] MVP scaffold: Elixir core structure, SwiftUI face sketch, extensive README
+- [x] OpenCode improvement pass: `mix test` 3/3, video + receipt fleshed out (2026-11-01)
 - [x] GitHub repo created (public, `main`): https://github.com/hamanakam1/scratch-kitchen — 2026-11-01
 - [x] Elixir core compile + `mix test` — 3/3 passing (2026-11-01, Elixir 1.20.5)
 - [ ] SwiftUI capture UI — blocked: Xcode not installed (only CommandLineTools)
@@ -276,3 +279,8 @@ MIT. See `LICENSE`. Scratch Kitchen is open source — use it, fork it, improve 
 ## Acknowledgements
 
 Built from a real kitchen: a scratch cook, a household that does not like leftovers, and a freezer that needed photographing first.
+
+## Known blockers
+
+- Elixir 1.20.5 installed via Homebrew; builds and tests pass.
+- Xcode not installed (only CommandLineTools); SwiftUI not build-checked.
