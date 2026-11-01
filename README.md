@@ -160,6 +160,20 @@ Giveaway vs. cottage sale is clearly labelled on every offer. A named human coor
 
 ## Architecture
 
+```mermaid
+flowchart LR
+  V[Video walkthrough] --> F[Frame extraction 1/s + scene changes]
+  F --> D[Dedupe: one item across frames]
+  D --> I[Inventory]
+  P[Photo close-up] --> I
+  R[Receipt / doc] --> M[Match: already / probable / new / conflict]
+  M --> I
+  I --> MP[Meal proposals <=40 words, specific time/person]
+  MP --> C[Cook]
+  C --> T[Transform into new meal]
+  C --> S[Share board: planned->packed->offered->picked up->delivered]
+```
+
 Two faces, one core:
 
 ```
