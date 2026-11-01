@@ -283,4 +283,4 @@ Built from a real kitchen: a scratch cook, a household that does not like leftov
 ## Known blockers
 
 - Elixir 1.20.5 installed via Homebrew; builds and tests pass.
-- Xcode not installed (only CommandLineTools); SwiftUI not build-checked.
+- Xcode 27.2 available; `swiftc -parse` on `ios/ContentView.swift` passed (2026-11-01).
