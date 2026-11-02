@@ -1,10 +1,18 @@
 # Scratch Kitchen
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Elixir: 1.15+](https://img.shields.io/badge/Elixir-1.15%2B-4B275F.svg)](mix.exs)
+[![SwiftUI: iOS 17+](https://img.shields.io/badge/SwiftUI-iOS_17%2B-F05138.svg)](ios/)
+[![Local First](https://img.shields.io/badge/privacy-local--first-2ea44f.svg)](SECURITY.md)
+[![Releases](https://img.shields.io/github/v/release/hamanakam1/scratch-kitchen)](https://github.com/hamanakam1/scratch-kitchen/releases)
+
 ![Guard logo](assets/guard-logo.svg)
 
 **Scratch cooking, from what you already have — reused into new meals, never re-served as leftovers, with the extra shared instead of wasted.**
 
 Scratch Kitchen is a photo-first kitchen app. Photograph everything coming into the kitchen, get an initial inventory, and get specific meals proposed for specific people at specific times, based only on ingredients actually on hand. Prepared food that will not be eaten at home is planned for sharing — giveaway first, cottage-kitchen sale only after a compliance check is recorded.
+
+![ExUnit verification of the Scratch Kitchen inventory, reuse-not-repeat meal guard, and sharing rules](docs/screenshots/mix-test.png)
 
 Open source, MIT licensed. Local-first by design. No kitchen photo is sent to a cloud service for recognition without an explicit approval.
 

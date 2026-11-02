@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <rect width="256" height="256" fill="#1a1a1a"/>
+  <g transform="translate(128,128)">
+    <!-- chef hat -->
+    <ellipse cx="0" cy="-52" rx="62" ry="26" fill="#f5f5f5"/>
+    <rect x="-52" y="-52" width="104" height="30" fill="#f5f5f5" rx="4"/>
+    <ellipse cx="0" cy="-22" rx="56" ry="10" fill="#e8e8e8"/>
+    <!-- face -->
+    <circle cx="0" cy="18" r="46" fill="#f2c9a0"/>
+    <!-- eyes -->
+    <circle cx="-14" cy="8" r="5" fill="#222"/>
+    <circle cx="14" cy="8" r="5" fill="#222"/>
+    <!-- smile -->
+    <path d="M -16 28 Q 0 40 16 28" stroke="#222" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- apron -->
+    <rect x="-44" y="62" width="88" height="70" fill="#ff8c1a" rx="6"/>
+    <text x="0" y="108" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1a1a1a">SCRATCH</text>
+  </g>
+  <text x="128" y="236" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#d4af37">New meal? In inventory? Share OK?</text>
+</svg>
