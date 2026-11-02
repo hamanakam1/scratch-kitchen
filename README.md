@@ -6,13 +6,19 @@
 [![Local First](https://img.shields.io/badge/privacy-local--first-2ea44f.svg)](SECURITY.md)
 [![Releases](https://img.shields.io/github/v/release/hamanakam1/scratch-kitchen)](https://github.com/hamanakam1/scratch-kitchen/releases)
 
-![Guard logo](assets/guard-logo.svg)
+**See what you have. Cook something new. Share the extra.**
 
-**Scratch cooking, from what you already have — reused into new meals, never re-served as leftovers, with the extra shared instead of wasted.**
+Scratch Kitchen starts with the ingredients already in your kitchen. Record a quick freezer, fridge and pantry walkthrough, review your inventory, and plan a meal for a specific person and time. Turn remaining ingredients into a different meal, then label and approve any extra you want to share.
 
-Scratch Kitchen is a photo-first kitchen app. Photograph everything coming into the kitchen, get an initial inventory, and get specific meals proposed for specific people at specific times, based only on ingredients actually on hand. Prepared food that will not be eaten at home is planned for sharing — giveaway first, cottage-kitchen sale only after a compliance check is recorded.
+![Animated storyboard inside a vintage wooden television: scan the kitchen, review ingredients, cook a meal, turn roast chicken into soup, label and approve the extra, then share it with a neighbor.](docs/storyboard/scratch-kitchen-tv.gif)
 
-![ExUnit verification of the Scratch Kitchen inventory, reuse-not-repeat meal guard, and sharing rules](docs/screenshots/mix-test.png)
+*Six scenes, one kitchen. Illustrated product concept; the animation shows the intended experience, not a recording of a released app.*
+
+[View all six scenes without animation](docs/storyboard/scratch-kitchen-storyboard.png) · [Read the storyboard](docs/storyboard.md)
+
+1. **Know what you have.** Scan the kitchen, confirm the ingredients, and use the most urgent items first. Unclear items stay flagged for review.
+2. **Cook, then transform.** Make a meal from inventory. Roast chicken can become chicken soup for the next meal, instead of serving the same dinner again.
+3. **Share with approval.** Pack and label the extra, approve that specific batch, and coordinate a human handoff. Giveaways come first; cottage sales require a separate compliance check.
 
 Open source, MIT licensed. Local-first by design. No kitchen photo is sent to a cloud service for recognition without an explicit approval.
 

@@ -1,0 +1,19 @@
+{
+  "size": [
+    1100,
+    733
+  ],
+  "frames": 18,
+  "duration_ms": 27000,
+  "loop": "forever",
+  "bytes": 3236698,
+  "generation": "Built-in image_gen illustrations; Pillow animation assembly",
+  "scenes": [
+    "Scan your kitchen",
+    "Review what you have",
+    "Cook a meal that fits",
+    "Make something new",
+    "Approve the extra",
+    "Share with a person"
+  ]
+}
